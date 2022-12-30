@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
+import { IIcon } from "../../interfaces";
 import { navLinks, socialIcons } from "../../utils/data";
 import "./Navbar.scss";
 
@@ -35,15 +37,17 @@ export default function Navbar() {
       },
     },
   };
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 20);
     });
   }, []);
+
   return (
     <motion.div
-      initial={{ y: -25 }}
-      animate={{ y: -5 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 5 }}
       transition={{ duration: 0.5 }}
       className={scroll ? "header active" : "header"}
     >
@@ -61,8 +65,12 @@ export default function Navbar() {
           })}
         </ul>
         <div className="social_icons">
-          {socialIcons.map((socialIcon, index) => {
-            return <div key={index}>{socialIcon}</div>;
+          {socialIcons.map((socialIcon: IIcon) => {
+            return (
+              <Link key={socialIcon.id} href={socialIcon.link} target="_blank">
+                <div>{socialIcon.icon}</div>
+              </Link>
+            );
           })}
         </div>
         <div className="menu">
