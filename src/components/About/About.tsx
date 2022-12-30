@@ -6,9 +6,9 @@ import portfolio from "../../assets/images/undrawproud.png";
 import { bios } from "../../utils/data";
 import "./About.scss";
 
-const About = () => {
+export default function About() {
   return (
-    <div className="container " id="about">
+    <div className="container" id="about">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ y: [-50, 0], opacity: 1 }}
@@ -36,9 +36,9 @@ const About = () => {
         >
           <p>
             I am a graduating student in Science and Technology with a focus on
-            Applied Computing from UFRN University. I enjoy studying and am
-            interested in building scalable applications always following
-            concepts such as Clean Architecture.
+            Applied Computing from Federal University of Rio Grande do Norte. I
+            enjoy studying and am interested in building scalable applications
+            always following concepts such as Clean Architecture.
           </p>
           {bios.map((bio) => {
             return (
@@ -53,7 +53,6 @@ const About = () => {
           })}
           <motion.a
             href="#"
-            download=""
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
             className="download_cv"
@@ -64,6 +63,4 @@ const About = () => {
       </div>
     </div>
   );
-};
-
-export default About;
+}
