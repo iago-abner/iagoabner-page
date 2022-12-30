@@ -5,7 +5,7 @@ import Image from "next/image";
 import profile from "../../assets/images/profile.png";
 import "./Home.scss";
 
-const Home = () => {
+export default function Home() {
   const moveVariants = {
     animation: {
       y: [0, -15],
@@ -29,7 +29,7 @@ const Home = () => {
       }}
     >
       <div className="profile">
-        <Image src={profile} alt="portfolio" />
+        <Image priority src={profile} alt="portfolio" />
       </div>
       <div className="profile_text">
         <h3 className="name">
@@ -38,10 +38,11 @@ const Home = () => {
         <span className="job">Software Developer </span>
         <span className="text">
           I code beautifully things <br />
-          (or try to) for the web
+          (or try) for the web
         </span>
         <motion.a
-          href="#contact"
+          href="https://www.linkedin.com/in/iago-abner/"
+          target="_blank"
           whileHover={{ scale: 1.1 }}
           variants={moveVariants}
           animate="animation"
@@ -53,6 +54,4 @@ const Home = () => {
       </div>
     </motion.div>
   );
-};
-
-export default Home;
+}
