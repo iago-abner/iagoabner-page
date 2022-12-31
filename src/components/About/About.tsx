@@ -52,7 +52,8 @@ export default function About() {
             );
           })}
           <motion.a
-            href="#"
+            href="../../assets/cv-fullstack.pdf"
+            download="cv-fullstack.pdf"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
             className="download_cv"
