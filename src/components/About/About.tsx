@@ -52,8 +52,8 @@ export default function About() {
             );
           })}
           <motion.a
-            href="../../assets/cv-fullstack.pdf"
-            download="cv-fullstack.pdf"
+            href="IagoAbner-FullstackJR.pdf"
+            download
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
             className="download_cv"
