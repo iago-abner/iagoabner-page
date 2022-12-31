@@ -29,7 +29,7 @@ import sensor from "../assets/images/nextjs-sensor-monitoring.png";
 import work6 from "../assets/images/work6.png";
 import { IIcon } from "../interfaces";
 
-export const navLinks = ["home", "about", "skills", "portfolio", "contact"];
+export const navLinks = ["home", "about", "skills", "portfolio"];
 
 export const socialIcons: IIcon[] = [
   {

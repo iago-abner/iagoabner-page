@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Typewriter from "typewriter-effect";
 import profile from "../../assets/images/profile.png";
 import "./Home.scss";
 
@@ -32,14 +33,26 @@ export default function Home() {
         <Image priority src={profile} alt="portfolio" />
       </div>
       <div className="profile_text">
-        <h3 className="name">
-          Hi, i'm <span>Iago Abner</span>{" "}
-        </h3>
+        <div className="welcome">
+          <div className="name">
+            Hi, i'm{" "}
+            <Typewriter
+              options={{
+                strings: ["Iago Abner", "proficient", "constant", "developer"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </div>
+        </div>
+
         <span className="job">Software Developer </span>
-        <span className="text">
+        <div className="text">
           I code beautifully things <br />
           (or try) for the web
-        </span>
+          <div className="web">Web Developer</div>
+          <div className="fullstack">Full-Stack</div>
+        </div>
         <motion.a
           href="https://www.linkedin.com/in/iago-abner/"
           target="_blank"
@@ -49,8 +62,6 @@ export default function Home() {
         >
           connect with me
         </motion.a>
-        <div className="web">Web Developer</div>
-        <div className="fullstack">Full-Stack</div>
       </div>
     </motion.div>
   );
