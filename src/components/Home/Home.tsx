@@ -33,7 +33,7 @@ export default function Home() {
         <Image priority src={profile} alt="portfolio" />
       </div>
       <div className="profile_text">
-        <div className="test">
+        <div className="welcome">
           <div className="name">
             Hi, i'm{" "}
             <Typewriter

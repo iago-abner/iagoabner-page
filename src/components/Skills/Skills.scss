@@ -29,6 +29,11 @@ margin: auto;
 max-width: 920px;
 row-gap: 4rem;
 
+@media screen and (max-width: 720px) {
+  grid-template-columns: repeat(3,1fr);
+  gap: 2rem;
+}
+
 @media screen and (max-width: 500px) {
   grid-template-columns: repeat(2,1fr);
   gap: 2rem;

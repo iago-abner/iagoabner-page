@@ -21,7 +21,7 @@
       align-items: center;
       position: relative;
 
-      .test{
+      .welcome{
         display: flex;
         width: auto;
         height: auto;
@@ -59,6 +59,12 @@
           font-size: 4rem;
           line-height: 1.3;
 
+          div {
+            @media screen  and (max-width: 800px) {
+              display: none;
+            }
+          }
+
           .web {
             position: absolute;
             right: 5rem;
@@ -91,19 +97,11 @@
                   text-transform: capitalize;
               }
       div{
-          // background: rgba(255,255,255,0.15);
           color: #fff;
           padding: 0.35rem 1rem;
           border-radius: 25px;
           font-size: 0.85rem;
           cursor: default;
       }
-      @media screen  and (max-width: 800px) {
-          div {
-              display: none;
-          }
-      }
-      
   }
-
 }
