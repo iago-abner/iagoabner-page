@@ -6,5 +6,5 @@ export interface IWork {
   name: string,
   category: string,
   gh: string,
-  host: string,
+  host?: string,
 }
