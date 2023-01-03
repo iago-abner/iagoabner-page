@@ -84,15 +84,17 @@ export default function Projects() {
                   <FiGithub />
                 </motion.a>
 
-                <motion.a
-                  href={work.host}
-                  target="_blank"
-                  whileInView={{ scale: [0, 1] }}
-                  whileHover={{ scale: [1, 1.1] }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <FiEye />
-                </motion.a>
+                {work.host && (
+                  <motion.a
+                    href={work.host}
+                    target="_blank"
+                    whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1, 1.1] }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <FiEye />
+                  </motion.a>
+                )}
               </motion.div>
             </div>
           );
