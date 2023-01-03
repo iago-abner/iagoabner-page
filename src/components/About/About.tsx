@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import portfolio from "../../assets/images/undrawproud.png";
-import { bios } from "../../utils/data";
+import { bios } from "../../utils/about";
 import "./About.scss";
 
 export default function About() {

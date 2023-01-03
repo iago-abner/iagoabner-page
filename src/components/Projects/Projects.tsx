@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FiEye, FiGithub } from "react-icons/fi";
-import { IWork } from "../../interfaces";
-import { workImages, workNavs } from "../../utils/data";
+import { IWork } from "../../types";
+import { navProjects } from "../../utils/navLinks";
+import { projectsImages } from "../../utils/projects";
 import "./Projects.scss";
 
 export default function Projects() {
@@ -15,10 +16,10 @@ export default function Projects() {
 
   useEffect(() => {
     if (tab.name === "all") {
-      setWorks(workImages);
+      setWorks(projectsImages);
     } else {
-      const newWork = workImages.filter((workImage) => {
-        return workImage.category.toLowerCase() === tab.name;
+      const newWork = projectsImages.filter((projectImage) => {
+        return projectImage.category.toLowerCase() === tab.name;
       });
       setWorks(newWork);
     }
@@ -44,14 +45,14 @@ export default function Projects() {
         whileInView={{ y: [-50, 0], opacity: 1 }}
         className="buttons"
       >
-        {workNavs.map((workNav, index) => {
+        {navProjects.map((projectNav, index) => {
           return (
             <button
               onClick={(e) => activeTab(e, index)}
               className={`${active === index ? "active" : ""}`}
               key={index}
             >
-              {workNav}
+              {projectNav}
             </button>
           );
         })}

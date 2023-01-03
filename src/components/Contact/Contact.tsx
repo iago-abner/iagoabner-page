@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { contacts, socialIcons } from "../../utils/data";
+import { contacts } from "../../utils/about";
+import { socialIcons } from "../../utils/icons";
 import "./Contact.scss";
 
 export default function Contact() {

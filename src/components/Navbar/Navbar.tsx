@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
-import { IIcon } from "../../interfaces";
-import { navLinks, socialIcons } from "../../utils/data";
+import { socialIcons } from "../../utils/icons";
+import { navLinks } from "../../utils/navLinks";
 import "./Navbar.scss";
 
 export default function Navbar() {
@@ -65,7 +65,7 @@ export default function Navbar() {
           })}
         </ul>
         <div className="social_icons">
-          {socialIcons.map((socialIcon: IIcon) => {
+          {socialIcons.map((socialIcon) => {
             return (
               <Link key={socialIcon.id} href={socialIcon.link} target="_blank">
                 <div>{socialIcon.icon}</div>

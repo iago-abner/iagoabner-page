@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { experiences, icons } from "../../utils/data";
+import { IconBaseProps } from "react-icons";
+import { experiences } from "../../utils/about";
+import { skillsIcons } from "../../utils/icons";
 import "./Skills.scss";
 
 export default function Skills() {
@@ -41,7 +43,7 @@ export default function Skills() {
         className="skills"
       >
         {active === 1 &&
-          icons.map((icon, index) => {
+          skillsIcons.map((icon: IconBaseProps, index) => {
             return (
               <div key={index} className="tools">
                 {icon}
